@@ -1,0 +1,420 @@
+/* ===== BODY ===== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding-top: 70px;
+  background: #ffffff;
+  color: #021c1e;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 15px 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #004445;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.logo {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #6fb98f;
+  position: absolute;
+  left: 10%;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #6fb98f;
+}
+.cart-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+.cart-btn:hover {
+  color: #6fb98f;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+}
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.nav-icons i:hover {
+  color: #6fb98f;
+}
+
+/* ===== CARRUSEL ===== */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 100px auto 50px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-item {
+  min-width: 100%;
+  position: relative;
+}
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: white;
+  background: rgba(111, 185, 143, 0.8);
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.prev:hover, .next:hover {
+  background: #529173;
+}
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* ===== PRODUCTOS ===== */
+.productos-section {
+  padding: 50px 10%;
+  text-align: center;
+}
+.productos-titulo {
+  font-size: 2em;
+  color: #004445;
+  margin-bottom: 30px;
+}
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.producto-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+}
+.producto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.producto-overlay {
+  padding: 15px;
+  background: #ffffff;
+  text-align: center;
+}
+.producto-overlay h3 {
+  color: #004445;
+  margin-bottom: 10px;
+}
+.producto-overlay p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+/* ===== BOTONES UNIFICADOS ===== */
+.button-unified {
+  background-color: #6fb98f;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.button-unified:hover {
+  background-color: #529173;
+}
+
+/* ===== MODALES ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #ffffff;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.modal-content h3 {
+  text-align: center;
+  color: #004445;
+  margin-bottom: 15px;
+}
+.close {
+  position: absolute;
+  right: 15px; top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #004445;
+  cursor: pointer;
+}
+.subproduct-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.subproduct-item input {
+  cursor: pointer;
+}
+
+/* ===== CARRITO ===== */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== FORMULARIO DE PAGO ===== */
+.payment-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.payment-buttons button {
+  flex: 1;
+  background-color: #6fb98f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.payment-buttons button:hover {
+  background-color: #529173;
+}
+.payment-modal form input, .payment-modal form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+.payment-modal form button {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #004445;
+  color: #6fb98f;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.payment-modal form button:hover {
+  background-color: #529173;
+  color: white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #004445;
+  color: white;
+  padding: 40px 20px;
+}
+.footer-container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+.footer-section h3 { color: #6fb98f; margin-bottom: 10px; border-bottom: 2px solid #6fb98f; display: inline-block; padding-bottom: 5px; }
+.footer-section ul { list-style: none; padding-left: 0; }
+.footer-section ul li { margin-bottom: 8px; }
+.footer-section ul li a { color: white; }
+.footer-section ul li a:hover { color: #6fb98f; text-decoration: underline; }
+.footer-section form { display: flex; flex-direction: column; }
+.footer-section input, .footer-section textarea { margin-bottom: 10px; padding: 8px; border: none; border-radius: 6px; }
+.footer-section button { background-color: #6fb98f; color: #004445; border: none; padding: 10px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.footer-section button:hover { background-color: #529173; }
+.social-icons i { font-size: 30px; margin: 5px; color: white; }
+.social-icons i:hover { color: #6fb98f; }
+.copy { text-align: center; margin-top: 20px; font-size: 0.85em; border-top: 1px solid #6fb98f; padding-top: 15px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) { .productos-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .nav-links { display: none; flex-direction: column; background: #004445; width: 100%; text-align: center; position: absolute; top: 65px; left: 0; }
+  .nav-links.active { display: flex; }
+  .productos-grid { grid-template-columns: 1fr; }
+  .carousel-item img { height: 250px; }
+}
+/* === CHATBOT === */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #004445;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 2000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+.chatbot-toggle:hover {
+  background-color: #6fb98f;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 330px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  z-index: 2001;
+}
+
+.chatbot-container.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.chat-header {
+  background-color: #004445;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-body {
+  padding: 10px;
+  height: 260px;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bot-message {
+  background-color: #6fb98f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px 10px 10px 0;
+  align-self: flex-start;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #004445;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px 10px 0 10px;
+  align-self: flex-end;
+  max-width: 80%;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  background: #004445;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background: #6fb98f;
+}
