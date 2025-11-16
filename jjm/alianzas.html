@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JJM Tecnologías - Alianzas</title>
+  <link rel="stylesheet" href="css/alianzas.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">JJM Tecnologías</div>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+      <li><a href="productos.html"><i class="fas fa-box-open"></i> Servicios</a></li>
+      <li><a href="publicaciones.html"><i class="fas fa-blog"></i> Publicaciones</a></li>
+      <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contáctanos</a></li>
+    </ul>
+    <div class="nav-icons">
+      <div class="menu-toggle">☰</div>
+    </div>
+  </nav>
+
+  <!-- ALIANZAS -->
+  <section id="alianzas" class="alianzas-section">
+    <h2>Alianzas Estratégicas</h2>
+    <p>Colaboramos con empresas y organizaciones para potenciar la innovación tecnológica.</p>
+    <div class="alianzas-grid">
+      <div class="alianza-card"><img src="img/alianza1.png" alt="Aliado 1"><p>Empresa 1</p></div>
+      <div class="alianza-card"><img src="img/alianza2.png" alt="Aliado 2"><p>Empresa 2</p></div>
+      <div class="alianza-card"><img src="img/alianza3.png" alt="Aliado 3"><p>Empresa 3</p></div>
+      <div class="alianza-card"><img src="img/alianza4.png" alt="Aliado 4"><p>Empresa 4</p></div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE ALIANZA -->
+  <section class="alianza-section" style="background-image: url('img/fondo.jpg'); background-size: cover; background-position: center;">
+    <div class="alianza-form-container">
+      <h2>Haz una Alianza con Nosotros</h2>
+      <form id="alianzaForm">
+        <input type="text" name="empresa" placeholder="Nombre de la empresa" required>
+        <input type="text" name="contacto" placeholder="Nombre del contacto" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <input type="text" name="telefono" placeholder="Teléfono" required>
+        <textarea name="descripcion" placeholder="Descripción de la alianza" rows="4" required></textarea>
+        <button type="submit"><i class="fas fa-handshake"></i> Enviar Solicitud</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Mapa de Sitio</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos y Servicios</a></li>
+          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Enviar Mensaje</h3>
+        <form>
+          <input type="text" placeholder="Nombre" required />
+          <input type="email" placeholder="Correo" required />
+          <textarea placeholder="Mensaje" rows="3" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-weixin"></i></a>
+          <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© 2025 JJM Tecnologías Innovadoras. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- CHATBOT -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chat-header">
+      <i class="fas fa-robot"></i> Asistente de Alianzas
+      <span class="chat-close" id="chatClose">✖</span>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="bot-message">👋 ¡Hola! Soy tu asistente virtual de JJM Tecnologías Innovadoras. ¿En qué puedo ayudarte hoy?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+      <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <div class="chatbot-toggle" id="chatbotToggle">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <script src="js/alianzas.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

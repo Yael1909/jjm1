@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto | JJM Tecnologías Innovadoras</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/contacto.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">JJM Tecnologías Innovadoras</div>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+      <li><a href="productos.html"><i class="fas fa-box-open"></i> Servicios</a></li>
+      <li><a href="alianzas.html"><i class="fas fa-handshake"></i> Alianzas</a></li>
+      <li><a href="publicaciones.html"><i class="fas fa-blog"></i> Publicaciones</a></li>
+    </ul>
+    <div class="menu-toggle">☰</div>
+  </nav>
+
+  <main>
+    <!-- CONTACTO + MAPA -->
+    <section class="contact-section card" id="contacto">
+      <h2><i class="fas fa-envelope"></i> Contáctanos</h2>
+      <p>Envíanos tus quejas o sugerencias y encuentra nuestra ubicación interactiva.</p>
+
+      <div class="contact-grid">
+        <!-- FORMULARIO -->
+        <form id="complaintForm" class="form-card">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" placeholder="Tu nombre" required>
+
+          <label for="email">Correo</label>
+          <input id="email" type="email" placeholder="tu@correo.com" required>
+
+          <label for="tipo">Tipo</label>
+          <select id="tipo">
+            <option value="queja">Queja</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="reporte">Reporte técnico</option>
+          </select>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+
+          <!-- 🎤 BOTÓN DE VOZ -->
+          <button type="button" id="voiceBtn" class="voice-btn">
+            🎤 Grabar voz
+          </button>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">
+              <i class="fas fa-paper-plane"></i> Enviar
+            </button>
+            <button type="button" id="clearFormBtn" class="btn">
+              <i class="fas fa-eraser"></i> Limpiar
+            </button>
+          </div>
+        </form>
+
+        <!-- MAPA -->
+        <div id="mapBox" class="map-box"></div>
+      </div>
+
+      <!-- BUZÓN PÚBLICO -->
+      <h3>Buzón público</h3>
+      <div id="publicInbox" class="inbox-list"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Mapa de Sitio</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos y Servicios</a></li>
+          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contáctanos</h3>
+        <form>
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Correo" required>
+          <textarea placeholder="Mensaje" rows="3" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-weixin"></i></a>
+          <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© 2025 JJM Tecnologías Innovadoras. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- CHATBOT -->
+  <div class="chatbot-container" id="chatbot">
+    <div class="chat-header">
+      <i class="fas fa-robot"></i> Asistente Virtual
+      <span class="chat-close" id="chatClose">✖</span>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="bot-message">👋 ¡Hola! Soy tu asistente virtual de JJM Tecnologías Innovadoras. ¿En qué puedo ayudarte hoy?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+      <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <div class="chatbot-toggle" id="chatbotToggle">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>

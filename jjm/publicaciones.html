@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publicaciones | JJM Tecnologías Innovadoras</title>
+<link rel="stylesheet" href="css/publicaciones.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">JJM Tecnologías</div>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+    <li><a href="productos.html"><i class="fas fa-box-open"></i> Servicios</a></li>
+    <li><a href="alianzas.html"><i class="fas fa-handshake"></i> Alianzas</a></li>
+    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contáctanos</a></li>
+  </ul>
+  <div class="menu-toggle">☰</div>
+</nav>
+
+<!-- SECCIÓN DE PUBLICACIONES -->
+<section class="blog-section">
+  <h2>Publicaciones y Noticias</h2>
+  <p>Explora las últimas noticias, artículos y actualizaciones de JJM Tecnologías Innovadoras.</p>
+
+  <div id="blogGrid" class="blog-grid">
+    <!-- Las publicaciones se generan aquí -->
+  </div>
+</section>
+
+<!-- FORMULARIO PARA NUEVAS PUBLICACIONES -->
+<div class="new-post-container">
+  <h3><i class="fa-solid fa-pen-to-square"></i> Agregar nueva publicación</h3>
+  <form id="newPostForm">
+    <input type="text" id="titulo" placeholder="Título de la publicación" required />
+    <textarea id="contenido" placeholder="Escribe el contenido..." rows="4" required></textarea>
+    <input type="file" id="imagen" accept="image/*" />
+    <button type="submit"><i class="fa-solid fa-upload"></i> Publicar</button>
+  </form>
+</div>
+
+<!-- REDES SOCIALES -->
+<div class="social-container">
+  <h3>Síguenos en nuestras redes</h3>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-weixin"></i></a>
+    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Mapa de Sitio</h3>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos y Servicios</a></li>
+        <li><a href="alianzas.html">Alianzas</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section" id="contacto">
+      <h3>Contáctanos</h3>
+      <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje" rows="3" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="footer-section">
+      <h3>Síguenos</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-weixin"></i></a>
+        <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <p class="copy">© 2025 JJM Tecnologías Innovadoras. Todos los derechos reservados.</p>
+</footer>
+
+<!-- CHATBOT -->
+<div class="chatbot-container" id="chatbot">
+  <div class="chat-header">
+    <i class="fas fa-robot"></i> Asistente Virtual
+    <span class="chat-close" id="chatClose">✖</span>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="bot-message">👋 ¡Hola! Soy tu asistente virtual de JJM Tecnologías Innovadoras. ¿En qué puedo ayudarte hoy?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Escribe tu mensaje..." />
+    <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<div class="chatbot-toggle" id="chatbotToggle">
+  <i class="fas fa-comments"></i>
+</div>
+
+<script src="js/publicaciones.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
